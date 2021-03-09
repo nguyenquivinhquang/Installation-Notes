@@ -93,7 +93,18 @@ Check if the path are correctly installed :
  ```
      echo $CUDA_HOME
  ```
- # Build tensorflow with Bazel #
+ 
+## Change version of CUDA with multiple version
+We can swich among CUDA version via using following commands:
+
+```
+$ sudo rm /usr/local/cuda
+$ sudo ln -s /usr/local/cuda-<version> /usr/local/cuda
+```
+
+
+
+# Build tensorflow with Bazel #
  
  Install gcc 4.8 (only version of gcc that can currently compile tensorflow) :
 
