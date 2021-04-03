@@ -1,9 +1,53 @@
+
+# Cache git account
+**Recommended and Secure Method: SSH**
+
+Create an ssh Github key. Go to  [github.com](https://www.github.com/)  -> Settings -> SSH and GPG keys -> New SSH Key. Now save your private key to your computer.
+
+Then, if the private key is saved as  _id_rsa_  in the  _~/.ssh/_  directory, we add it for authentication as such:
+
+```
+ssh-add -K ~/.ssh/id_rsa
+
+```
+
+  
+**A More Secure Method: Caching**
+
+We can use git-credential-store to cache our username and password for a time period. Simply enter the following in your CLI (terminal or command prompt):
+
+```
+git config --global credential.helper cache
+
+```
+
+You can also set the timeout period (in seconds) as such:
+
+```
+git config --global credential.helper 'cache --timeout=3600'
+
+```
+
+  
+**An Even Less Secure Method**
+
+Git-credential-store may also be used, but saves passwords in plain text file on your disk as such:
+
+```
+git config credential.helper store
+
+```
+# Set up 2-factor authentication on Git
 These are instructions for setting up git to authenticate with GitHub when you have 2-factor authentication set up. This authentication should be inherited by any GUI client you are using. These are intentionally brief instructions, with links to more detail in the appropriate places.
 
 1. Download and install the [git command-line client](https://git-scm.com/download) (if required).
 
 2. Open the git bash window and [introduce yourself to git](http://happygitwithr.com/hello-git.html) (if required):
-
+		Remove old stuffs
+	```
+    git config --global --unset-all user.name
+    git config --global --unset-all user.email
+	```
     ```
     git config --global user.name 'Firstname Lastname'
     git config --global user.email 'firstname.lastname@gov.bc.ca'
