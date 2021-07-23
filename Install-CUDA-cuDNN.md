@@ -50,7 +50,7 @@ Add graphics drivers to your source list :
 ```
 # Install cuda # 
 
-Download cuda_your_cuda_version.run on https://developer.nvidia.com/cuda-toolkit and install it: 
+Download cuda_your_cuda_version.run on https://developer.nvidia.com/cuda-toolkit or link[https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal]and install it: 
 
 ```
      cd Downloads/
