@@ -1,8 +1,7 @@
 # Update - upgrade - auto clean:
 
-```
 	sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y
-```	
+	
 # Install vietnamese keyboard
 	sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo && sudo apt-get update && sudo apt-get install ibus-bamboo && ibus restart
 	
