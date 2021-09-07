@@ -34,7 +34,9 @@ The way to fix:
 
 
 ## Second: 
+Run install.sh. If you meet any error, followin instructions below to fix. Otherwise you success to install torch.
 + Open install.sh and comment out anything inside of conditionals which check if [ -x "$path_to_nvcc" ]: during initial installation we won’t even try to install anything CUDA-related.
++ Then, try run install.sh again.
 + In torch folder, open terminal and run:
 ```
 CC=gcc-6 CXX=g++-6 install/bin/luarocks install cutorch
