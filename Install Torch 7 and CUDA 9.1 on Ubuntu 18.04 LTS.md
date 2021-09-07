@@ -12,6 +12,7 @@ sudo ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 ```
 
 # Installing Torch
+## First:
 Follow this instruction to install torch7: [link](http://torch.ch/docs/getting-started.html#installing-torch)
 
 If you see the error like below: 
@@ -30,3 +31,15 @@ The way to fix:
   + Open file install-deps.
   + Find the line **sudo apt-get install -y python-software-properties** and comment this line.
   + Install torch again.
+
+
+## Second: 
++ Open install.sh and comment out anything inside of conditionals which check if [ -x "$path_to_nvcc" ]: during initial installation we won’t even try to install anything CUDA-related.
++ In torch folder, open terminal and run:
+```
+CC=gcc-6 CXX=g++-6 install/bin/luarocks install cutorch
+
+CC=gcc-6 CXX=g++-6 install/bin/luarocks install cunn
+
+CC=gcc-6 CXX=g++-6 install/bin/luarocks install cudnn
+```
