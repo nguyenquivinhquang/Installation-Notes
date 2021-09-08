@@ -4,13 +4,13 @@ verify the system has a cuda-capable gpu
 
 download and install the nvidia cuda toolkit and cudnn
 
-etup environmental variables
+setup environmental variables
 
 verify the installation
 
 CUDA 9.0 requires NVIDIA driver version 384 or above
 
-# to verify your gpu is cuda enable check
+# To verify your gpu is cuda enable check
 ```
 lspci | grep -i nvidia
 ```
@@ -18,15 +18,15 @@ lspci | grep -i nvidia
 ```
 gcc --version
 ```
-# first get the PPA repository driver
+# First get the PPA repository driver
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 ```
-# install nvidia driver 
+# Install nvidia driver 
 ```
 sudo apt install nvidia-384 nvidia-384-dev
 ```
-# install other import packages
+# Install other import packages
 ```
 sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
 ```
@@ -35,11 +35,11 @@ sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev lib
 sudo apt install gcc-6
 sudo apt install g++-6
 ```
-# downoad one of the "runfile (local)" installation packages from cuda toolkit archive 
+# Downoad one of the "runfile (local)" installation packages from cuda toolkit archive 
 ```
 wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
 ```
-# make the download file executable
+# Make the download file executable
 ```
 chmod +x cuda_9.0.176_384.81_linux-run 
 sudo ./cuda_9.0.176_384.81_linux-run --override
@@ -61,11 +61,11 @@ sudo ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 ```
 echo 'export PATH=/usr/local/cuda-9.0/bin:$PATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
-```
 source ~/.bashrc
-# install cuDNN v7.2
-# in order to download cuDNN you have to regeistered here https://developer.nvidia.com/developer-program/signup
-# then download cuDNN v7.2 form https://developer.nvidia.com/cudnn
+
+```
+# Install cuDNN v7.2 
+In order to download cuDNN you have to regeistered here https://developer.nvidia.com/developer-program/signup then download cuDNN v7.2 form https://developer.nvidia.com/cudnn
 ```
 CUDNN_TAR_FILE="cudnn-9.0-linux-x64-v7.2.1.38"
 wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.2.1/prod/9.0_20180806/${CUDNN_TAR_FILE}
