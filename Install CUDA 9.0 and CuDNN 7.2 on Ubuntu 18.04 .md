@@ -44,10 +44,14 @@ wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.
 chmod +x cuda_9.0.176_384.81_linux-run 
 sudo ./cuda_9.0.176_384.81_linux-run --override
 ```
-# answer following questions while installation begin
-# You are attempting to install on an unsupported configuration. Do you wish to continue? y
-# Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81? n
-# Install the CUDA 9.0 Toolkit? y
+answer following questions while installation begin
+
+You are attempting to install on an unsupported configuration. Do you wish to continue? y
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81? n
+
+Install the CUDA 9.0 Toolkit? y
+
 # set up symlinks for gcc/g++
 ```
 sudo ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
