@@ -34,14 +34,17 @@ The way to fix:
 
 
 ## Second: 
-Run install.sh. If you meet any error, followin instructions below to fix. Otherwise you success to install torch.
-+ Open install.sh and comment out anything inside of conditionals which check if [ -x "$path_to_nvcc" ]: during initial installation we won’t even try to install anything CUDA-related.
-+ Then, try run install.sh again.
-+ In torch folder, open terminal and run:
+Run install.sh. 
+Some errors and the way to fix:
+
+### Error: Unsupported gpu architecture 'compute_75'
+Fix: the line below and run install.sh again.
 ```
-CC=gcc-6 CXX=g++-6 install/bin/luarocks install cutorch
+export TORCH_CUDA_ARCH_LIST="7.0"
+```
 
-CC=gcc-6 CXX=g++-6 install/bin/luarocks install cunn
-
-CC=gcc-6 CXX=g++-6 install/bin/luarocks install cudnn
+### Error: "THCTensorMathPairwise.cu(66): error: more than one operator "!=" matches
+Fix: the line below and run install.sh again.
+```
+export TORCH_NVCC_FLAGS="-D__CUDA_NO_HALF_OPERATORS__" 
 ```
