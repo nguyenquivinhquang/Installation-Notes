@@ -38,13 +38,13 @@ Run install.sh.
 Some errors and the way to fix:
 
 ### Error: Unsupported gpu architecture 'compute_75'
-Fix: the line below and run install.sh again.
+Fix: run the line below in the folder torch and run install.sh again.
 ```
 export TORCH_CUDA_ARCH_LIST="7.0"
 ```
 
 ### Error: "THCTensorMathPairwise.cu(66): error: more than one operator "!=" matches
-Fix: the line below and run install.sh again.
+Fix: run the line below in the folder torch and run install.sh again.
 ```
 export TORCH_NVCC_FLAGS="-D__CUDA_NO_HALF_OPERATORS__" 
 ```
