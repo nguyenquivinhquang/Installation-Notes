@@ -28,7 +28,7 @@ user = 'username'
 token = 'user-token'
 repo_name = 'user/respo-name'
 
-cmd_string = 'git clone https://{0}:{1}@github.com/{2}.git'.format(user, password, repo_name)
+cmd_string = 'git clone https://{0}:{1}@github.com/{2}.git'.format(user, token, repo_name)
 print(cmd_string)
 os.system(cmd_string)
 cmd_string, token = "", "" # removing the password from the variable
