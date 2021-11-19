@@ -19,6 +19,11 @@ Third: From the task Ram/Disk, chosing connect to the hosted runtime.
 
 ## Setup github to clone private respo
 
+### First: 
+Following the [link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate github token 
+
+### Second:
+
 ```
 import os
 from getpass import getpass
