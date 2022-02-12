@@ -39,3 +39,29 @@ To exit when in log, press Q
 git status
 ```
 
+# Show current branch
+```
+git branch
+```
+
+# Merge branch A to branch B
+
+First, switch to branch A
+```
+git checkout A
+```
+
+Second, pull file
+``` 
+git pull
+```
+
+Third, switch to branch B
+```
+git checkout B
+```
+
+Fourth, merge
+```
+git merge A
+```
