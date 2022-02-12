@@ -17,13 +17,13 @@ git add .
 git commit -a -m 'commit message'
 ```
 
-# pull 
+# Pull 
 
 ```
 git pull
 ```
 
-# push
+# Push
 ```
 git push
 ```
@@ -32,7 +32,7 @@ git push
 ``` 
 git log
 ```
-To exit when in log, press Q
+To exit when in log, press Q or ctrl + z
 
 # Show modified files in working directory, staged for your next commit
 ```
