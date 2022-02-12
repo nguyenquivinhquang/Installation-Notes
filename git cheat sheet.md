@@ -34,7 +34,7 @@ git log
 ```
 To exit when in log, press Q
 
-# show modified files in working directory, staged for your next commit
+# Show modified files in working directory, staged for your next commit
 ```
 git status
 ```
@@ -42,6 +42,11 @@ git status
 # Show current branch
 ```
 git branch
+```
+
+# Switch to branch A
+```
+git checkout A
 ```
 
 # Merge branch A to branch B
