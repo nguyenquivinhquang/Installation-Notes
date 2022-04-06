@@ -4,7 +4,7 @@
 watch -n0.1 nvidia-smi
 ```
 
-## Clear gpu memory on colab wihtout restart session
+## Clear gpu memory on colab without restart session
 First: 
 ```
 sudo fuser -v /dev/nvidia*
